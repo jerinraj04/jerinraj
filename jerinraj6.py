@@ -1,6 +1,4 @@
-# Python Program - Check Vowel or Not
-
-print("Enter '0' for exit.");
+print("Enter '0' for exit");
 ch = input("Enter any character: ");
 if ch == '0':
     exit();
