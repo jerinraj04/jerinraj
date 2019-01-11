@@ -1,10 +1,33 @@
- 
-def bin(n) : 
-    if n > 1 : 
-        bin(n // 2) 
- print(n % 2,end = "") 
-     if name == "main" : 
- bin(7) 
- print() 
- bin(4) 
-     
+#include <stdio.h>
+int main()
+{
+    int n, i, flag = 0;
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
+
+    for(i = 2; i <= n/2; ++i)
+    {
+        // condition for nonprime number
+        if(n%i == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (n == 1) 
+    {
+      printf("1 is neither a prime nor a composite number.");
+    }
+    else 
+    {
+        if (flag == 0)
+          printf("%d is a prime number.", n);
+        else
+          printf("%d is not a prime number.", n);
+    }
+    
+    return 0;
+}
+
